@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>XBlack Vape | Modern Vaping Experience</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="#" class="logo">
+        <img src="icon.jffi" class="logo-icon" alt="XBlack Vape Logo" />
+        XBlack Vape
+      </a>
+
+      <div class="navbar">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#products">Products</a>
+        <a href="#service">Service</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+ 
+  <section id="home">
+    <h2 class="pop">Welcome to XBlack Vape</h2>
+    <p class="pop">
+      Welcome to <strong>XBlack Vape</strong>, your go to destination for modern, high-quality vaping. We combine bold design, powerful performance, 
+      and smooth flavors to give you the ultimate vape experience. Each product is crafted with care to deliver long-lasting power, rich taste, and a sleek look that fits your lifestyle. 
+      Whether youre new to vaping or already a pro, XBlack Vape offers reliability, comfort, and style in every puff.
+      Enjoy fast delivery, great customer service, and premium devices made to keep you satisfied anytime, anywhere.<br>
+
+    </p>
+  </section>
+
+ 
+  <section id="about" >
+    <h2 class="pop">About Us</h2>
+    <p class="pop">
+XBlack Vape is dedicated to delivering high-quality vape devices that combine modern style, powerful performance, and smooth flavor. 
+Our mission is to provide vapers with reliable, stylish products that enhance every experience from the first puff to the last. 
+Each device is designed with precision, offering long battery life, fast charging, and premium build quality. We aim to make vaping easy, 
+enjoyable, and accessible for everyone by offering fast delivery, trusted customer care, and a wide variety of flavors to suit every taste. 
+At XBlack Vape, we believe that vaping is more than just a habit, its a lifestyle built on quality, innovation, and satisfaction.<br>
+
+  </section>
+
+
+  <section class="section-dark" id="products">
+    <h2 class="pop">Our Products</h2>
+
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="b.teo.png" class="pop">
+        <h3>XBlack Pod</h3>
+        <p>Sleek, lightweight, and perfect for everyday use.</p>
+        <span class="price">₱325.00</span>
+        <button class="btn">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="cb.jpg" class="pop">
+        <h3>XBlack Juice</h3>
+        <p>Rich flavors crafted for smooth and satisfying hits.</p>
+        <span class="price">₱325.00</span>
+        <button class="btn">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="mac.jpg" class="pop">
+        <h3>XBlack Version 1</h3>
+        <p>Stylish and compact vape with smooth flavor and easy use.</p>
+        <span class="price">₱325.00</span>
+        <button class="btn">Add to Cart</button>
+      </div>
+  
+  <div class="product-card">
+        <img src="batt.jpg" class="pop">
+        <h3>XBlack Battery</h3>
+        <p>Long-lasting vape battery with fast charging and reliable power.
+</p>
+        <span class="price">₱290.00</span>
+        <button class="btn">Add to Cart</button>
+      </div>
+
+  <div class="product-card">
+        <img src="8000.png" class="pop">
+        <h3>XBlack Dispo</h3>
+        <p>Instant use, no refills just pure satisfaction.</p>
+        <span class="price">₱265.00</span>
+        <button class="btn">Add to Cart</button>
+      </div>
+  </section>
+
+  <section id="service" class="section-pink">
+    <h2 class="pop">Our Service</h2>
+    <p class="pop">
+      At XBlack Vape, we are dedicated to providing high-quality vape devices and accessories that combine modern style with reliable performance. 
+      Our goal is to give customers a smooth and satisfying vaping experience with every puff. We offer fast and secure delivery, ensuring your orders
+      arrive on time and in perfect condition. Our customer care team is always ready to help with any questions or concerns, making your shopping experience
+      easy and worry-free. With XBlack Vape, you can expect premium products, trusted service, and a brand that puts your satisfaction first.<br>
+
+    </p>
+  </section>
+
+  <section id="reviews" class="section-dark">
+    <h2 class="pop">Customer Reviews</h2>
+    <p class="pop">
+      🔥 “Stylish and powerful XBlack Vape changed my experience.”<br>
+      ⚡ “Fast delivery, premium build, and amazing flavors.”<br>
+      ⭐ “The best vape brand I’ve tried so far!”<br>
+    </p>
+  </section>
+
+  <section id="contact" class="section-pink">
+    <h2 class="pop">Contact Us</h2>
+    <p class="pop">
+      📞 Call: 0946-243-8336 <br>
+      📧 Email: GeraldMallari@xblackvape.com <br>
+      📍 Visit us: Bagong Pag-Asa, Manila, Philippines
+    </p>
+  </section>
+
+ 
+  <script>
+    const navLinks = document.querySelectorAll(".navbar a");
+    const sections = document.querySelectorAll("section");
+    function showSection(id) {
+      sections.forEach(section => {
+        if (section.id === id) {
+          section.classList.add('active');
+        } else {
+          section.classList.remove('active');
+        }
+      });
+    }
+
+    navLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        const targetId = link.getAttribute("href");
+        const targetSection = document.querySelector(targetId);
+        if (targetSection) {
+          const aniElements = targetSection.querySelectorAll(".pop");
+          aniElements.forEach(el => {
+            el.style.animation = "none";
+            void el.offsetWidth;
+            el.style.animation = "";
+          });
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

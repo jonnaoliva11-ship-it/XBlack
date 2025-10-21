@@ -1,0 +1,250 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top left, #0b0b0b, #1a1a1a);
+  color: #fff;
+  line-height: 1.5;
+  background-image: url("b.v.png");
+  background-size: cover;
+  background-attachment: fixed;
+  background-blend-mode: overlay;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 60px;
+  box-shadow: 0 2px 10px rgba(232, 67, 147, 0.4);
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 28px;
+  font-weight: 600;
+  color: #ff4fbf;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.logo-icon {
+  width: 35px;
+  height: 35px;
+  margin-right: 10px;
+}
+
+.navbar {
+  display: flex;
+  gap: 25px;
+}
+
+.navbar a {
+  color: #f1f1f1;
+  text-decoration: none;
+  font-weight: 700;
+  transition: color 0.3s;
+  
+}
+
+.navbar a:hover {
+  color: #ff4fbf;
+}
+
+section {
+  min-height: 100vh;
+  padding: 120px 10%;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.03);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+h2.pop {
+  font-size: 2.8rem;
+  color: #ff4fbf;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+p.pop {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 18px rgba(255, 79, 191, 0.15);
+  transition: transform 0.3s ease;
+}
+
+p.pop:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(255, 79, 191, 0.3);
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.product-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 15px;
+  transition: 0.3s;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(255, 79, 191, 0.15);
+}
+
+.product-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  background: rgba(255, 79, 191, 0.1);
+}
+
+.product-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: flex;
+  border-radius: 10px;
+}
+
+.product-card h3 {
+  margin-top: 10px;
+  color: #ff4fbf;
+  font-size: 1.3em;
+}
+
+.product-card p {
+  font-size: 0.95em;
+  color: #f1f1f1;
+}
+
+.pop {
+  animation: slidePop 1s ease-out forwards;
+  line-height: 1.5;
+  animation-delay: 0.1s;
+  font-size: 18px;
+  transform: scale(0.5);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.price {
+  display: block;
+  margin: 8px 0;
+  font-size: 1.2em;
+  color: #ffd700;
+  font-weight: bold;
+}
+
+.btn {
+  background: #ff4fbf;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #ff77cf;
+  transform: scale(1.1);
+}
+
+.section-dark { 
+  background-color: #0a0a0a; 
+}
+
+.section-pink { 
+  background: radial-gradient(circle at top left, #ff85c0, #000); 
+}
+
+@keyframes slidePop {
+  from{
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to{
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 480px) {
+  
+  body {
+    background-attachment: scroll;
+    background-size: cover;
+    overflow-x: hidden;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
+    text-align: center;
+  }
+
+  .logo {
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .navbar a {
+    font-size: 15px;
+  }
+
+  section {
+    padding: 100px 8%;
+  }
+
+  h2.pop {
+    font-size: 1.9rem;
+  }
+
+  p.pop {
+    font-size: 1rem;
+    padding: 15px;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .product-card {
+    padding: 15px;
+  }
+
+  .product-card img {
+    height: 180px;
+    border-radius: 10px;
+  }
+
+  .btn {
+    padding: 8px 18px;
+    font-size: 0.9rem;
+  }
+}
